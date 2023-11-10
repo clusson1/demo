@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('GetProject') {
             steps {
-                git 'https://github.com/takfarinassaber/CT5171_test1Maven.git'
+                git 'https://github.com/clusson1/demo.git'
             }
         }
         stage ('build') {
@@ -28,7 +28,7 @@ pipeline {
     post {
         success {
             archiveArtifacts allowEmptyArchive: true,
-                artifacts: '**/ct5171_test1Maven*.jar'
+                artifacts: '**/demo*.jar'
         }
     }
 }
